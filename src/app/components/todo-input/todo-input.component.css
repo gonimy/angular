@@ -1,0 +1,9 @@
+.input-todo {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+}

@@ -1,0 +1,14 @@
+<div class="container" *ngFor="let task of tasks; let i = index">
+  <div class="task">
+    <h3 class="display-4">{{ task.title }}</h3>
+    <hr />
+    <br />
+    <button class="btn btn-outline-danger" (click)="removeTask(i)">
+      Remove Task
+    </button>
+  </div>
+</div>
+<br /><br /><br />
+<br /><br /><br />
+<br />
+

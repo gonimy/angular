@@ -1,0 +1,26 @@
+.task {
+    border: 1px solid rgb(178, 170, 224);
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.task>h1 {
+    margin: 10px;
+    padding: 10px;
+}
+
+.task>button {
+    margin: 5px;
+    padding: 5px;
+    position: absolute;
+    right: 30px;
+    bottom: 2px;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+}
