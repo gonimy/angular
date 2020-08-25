@@ -1,11 +1,43 @@
 <div class="container">
-    <h1 class="display-4 input-todo">TODO LIST</h1>
-    <br>
-    <div class="form-group ">
-        <input type="text" class="form-control" [(ngModel)]="taskTitle" placeholder="TODO Task Title">
-        <br>
-        <button class="btn btn-outline-primary" (click)="addTask()">Add Task</button>
+  <h1 class="display-4 input-todo">TODO LIST</h1>
+  <br />
+  <form action="" [formGroup]="inputForm" (ngSubmit)="addTask()">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="taskTitle"
+        placeholder="TODO Task Title"
+        formControlName="taskTitle"
+      />
+      <span
+        class="help-block"
+        *ngIf="
+          !inputForm.get('taskTitle').valid &&
+          inputForm.get('taskTitle').touched
+        "
+      >
+        <span *ngIf="inputForm.get('taskTitle').errors['empty']"
+          >This Filed Cant Be Empty</span
+        >
+        <span *ngIf="inputForm.get('taskTitle').errors['required']"
+          >This Filed Is Required
+        </span>
+      </span>
+      <br />
+      <button class="btn btn-outline-primary" type="submit">
+        Add Task
+      </button>
+      <br>
+      <span
+      class="help-block"
+      *ngIf="
+        !inputForm.valid &&
+        inputForm.touched
+      "
+    >Please Fill the data</span>
     </div>
-    <hr>
-    <br>
+  </form>
+  <hr />
+  <br />
 </div>
